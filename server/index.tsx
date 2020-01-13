@@ -9,7 +9,7 @@ import { createRouter } from "../common/routes";
 import Index from "../common/Pages/Top";
 import About from "../common/Pages/About";
 
-const App: React.FunctionComponent = ({ children }) => (
+const App: React.FC = ({ children }) => (
   <html lang="ja">
     <head>
       <meta charSet="UTF-8" />
