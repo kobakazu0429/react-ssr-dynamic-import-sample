@@ -13,7 +13,24 @@ module.exports = merge(common, {
 
   output: {
     path: path.resolve(__dirname, "../dist/"),
-    filename: "[name]-[hash].js"
+    filename: "bundle.js",
+    chunkFilename: "[name].js",
+    sourceMapFilename: "[name].js.map",
+    publicPath: `/static/`
+  },
+
+  optimization: {
+    splitChunks: {
+      chunks: "initial",
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          enforce: true
+        }
+      }
+    },
+    concatenateModules: true
   },
 
   plugins: [new CleanWebpackPlugin(), new ManifestPlugin()],
