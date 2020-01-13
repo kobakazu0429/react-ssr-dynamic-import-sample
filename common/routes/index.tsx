@@ -5,7 +5,7 @@ interface Props {
   routes: RouteProps[];
 }
 
-export const createRoute: FC<Props> = ({ routes }) => {
+export const createRouter: FC<Props> = ({ routes }) => {
   return (
     <Switch>
       {routes.map((route, index) => (

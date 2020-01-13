@@ -4,7 +4,7 @@ import React, { lazy, Suspense } from "react";
 import { hydrate } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import { createRoute } from "../common/routes";
+import { createRouter } from "../common/routes";
 
 const routes = [
   {
@@ -19,7 +19,7 @@ const routes = [
   }
 ];
 
-const Router = createRoute({ routes });
+const Router = createRouter({ routes });
 
 hydrate(
   <BrowserRouter>
