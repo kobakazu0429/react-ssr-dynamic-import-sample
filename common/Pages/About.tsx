@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import * as React from "react";
 import Nav from "../components/Nav";
 
-const AboutPage: FC = () => {
+const AboutPage: React.FC = () => {
   return (
     <div>
       <p>This is About Page</p>

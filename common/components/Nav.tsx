@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 
-const Nav: FC = () => (
+const Nav: React.FC = () => (
   <div>
     <ul>
       <li>
