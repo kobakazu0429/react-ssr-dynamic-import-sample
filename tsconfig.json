@@ -2,14 +2,10 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es2015",
-    "target": "es2018",
+    "module": "esnext",
+    "target": "es2015",
     "jsx": "react",
     "typeRoots": ["node_modules/@types", "src/typings"],
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"]
-    },
     "lib": ["esnext", "dom"],
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -24,6 +20,6 @@
     "experimentalDecorators": true,
     "newLine": "LF"
   },
-  "include": ["src/**/*"],
+  "include": ["**/*"],
   "exclude": ["node_modules"]
 }
