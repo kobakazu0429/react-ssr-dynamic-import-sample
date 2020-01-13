@@ -5,9 +5,13 @@
   "author": "kobakakzu0429 <kobakazu10@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --color --progress --config ./config/webpack.config.prod.js",
-    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
-    "lint": "tslint --fix -c ./tslint.json '{client,common,server}/**/*{.ts,.tsx}'"
+    "build:client": "webpack --color --progress --config ./config/webpack.config.prod.js",
+    "dev:client": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "build:server": "tsc --project .",
+    "dev:server": "yarn build:server --watch",
+    "start:ssr": "wait-on dist/server/index.js && node dist/server/index.js",
+    "lint": "tslint --fix -c ./tslint.json '{client,common,server}/**/*{.ts,.tsx}'",
+    "clean": "rm -rf dist"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
